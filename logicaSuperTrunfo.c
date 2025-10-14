@@ -1,43 +1,119 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    // Definições de variáveis carta 1
+        char estado1;
+            char codigo1[20];
+                char cidade1[30];
+                    int populacao1;
+                        float area1;
+                            float pib1;
+                                int pontosTuristicos1;
+                                    float densidadePopulacional1;
+                                        float pibPerCapita1;
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+                                            // Definições de variáveis carta 2
+                                                char estado2;
+                                                    char codigo2[20];
+                                                        char cidade2[30];
+                                                            int populacao2;
+                                                                float area2;
+                                                                    float pib2;
+                                                                        int pontosTuristicos2;
+                                                                            float densidadePopulacional2;
+                                                                                float pibPerCapita2;
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+                                                                                    // Entrada de dados carta 1
+                                                                                        printf("Digite os dados da carta 1\n");
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+                                                                                            printf("Digite o Estado: ");
+                                                                                                scanf(" %c", &estado1); 
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+                                                                                                    printf("Digite o código da carta: ");
+                                                                                                        scanf("%s", codigo1);
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+                                                                                                            printf("Qual a cidade? ");
+                                                                                                                scanf("%s", cidade1);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+                                                                                                                    printf("Qual a população? ");
+                                                                                                                        scanf("%d", &populacao1);
 
-    return 0;
-}
+                                                                                                                            printf("Qual a área em km²? ");
+                                                                                                                                scanf("%f", &area1);
+
+                                                                                                                                    printf("Digite o PIB: ");
+                                                                                                                                        scanf("%f", &pib1);
+
+                                                                                                                                            printf("Qual o número de pontos turísticos? ");
+                                                                                                                                                scanf("%d", &pontosTuristicos1);
+
+                                                                                                                                                    // Calculando densidade e PIB per capita carta 1
+                                                                                                                                                        densidadePopulacional1 = populacao1 / area1;
+                                                                                                                                                            pibPerCapita1 = pib1 / populacao1;
+
+                                                                                                                                                                // Entrada de dados carta 2
+                                                                                                                                                                    printf("\nDigite os dados da carta 2\n");
+
+                                                                                                                                                                        printf("Digite o Estado: ");
+                                                                                                                                                                            scanf(" %c", &estado2);
+
+                                                                                                                                                                                printf("Digite o código da carta: ");
+                                                                                                                                                                                    scanf("%s", codigo2);
+
+                                                                                                                                                                                        printf("Qual a cidade? ");
+                                                                                                                                                                                            scanf("%s", cidade2);
+
+                                                                                                                                                                                                printf("Qual a população? ");
+                                                                                                                                                                                                    scanf("%d", &populacao2);
+
+                                                                                                                                                                                                        printf("Qual a área em km²? ");
+                                                                                                                                                                                                            scanf("%f", &area2);
+
+                                                                                                                                                                                                                printf("Digite o PIB: ");
+                                                                                                                                                                                                                    scanf("%f", &pib2);
+
+                                                                                                                                                                                                                        printf("Qual o número de pontos turísticos? ");
+                                                                                                                                                                                                                            scanf("%d", &pontosTuristicos2);
+
+                                                                                                                                                                                                                                // Calculando densidade e PIB per capita carta 2
+                                                                                                                                                                                                                                    densidadePopulacional2 = populacao2 / area2;
+                                                                                                                                                                                                                                        pibPerCapita2 = pib2 / populacao2;
+
+
+                                                                                                                                                                                                                                            // Exibindo os dados
+                                                                                                                                                                                                                                                printf("\n----- Dados da Carta 1 -----\n");
+                                                                                                                                                                                                                                                    printf("Estado: %c\n", estado1);
+                                                                                                                                                                                                                                                        printf("Código: %s\n", codigo1);
+                                                                                                                                                                                                                                                            printf("Cidade: %s\n", cidade1);
+                                                                                                                                                                                                                                                                printf("População: %d\n", populacao1);
+                                                                                                                                                                                                                                                                    printf("Área: %.2f km²\n", area1);
+                                                                                                                                                                                                                                                                        printf("PIB: %.2f\n", pib1);
+                                                                                                                                                                                                                                                                            printf("Pontos turísticos: %d\n", pontosTuristicos1);
+                                                                                                                                                                                                                                                                                printf("Densidade populacional: %.2f hab/km²\n", densidadePopulacional1);
+                                                                                                                                                                                                                                                                                    printf("PIB per capita: %.2f\n", pibPerCapita1);
+
+                                                                                                                                                                                                                                                                                        printf("\n----- Dados da Carta 2 -----\n");
+                                                                                                                                                                                                                                                                                            printf("Estado: %c\n", estado2);
+                                                                                                                                                                                                                                                                                                printf("Código: %s\n", codigo2);
+                                                                                                                                                                                                                                                                                                    printf("Cidade: %s\n", cidade2);
+                                                                                                                                                                                                                                                                                                        printf("População: %d\n", populacao2);
+                                                                                                                                                                                                                                                                                                            printf("Área: %.2f km²\n", area2);
+                                                                                                                                                                                                                                                                                                                printf("PIB: %.2f\n", pib2);
+                                                                                                                                                                                                                                                                                                                    printf("Pontos turísticos: %d\n", pontosTuristicos2);
+                                                                                                                                                                                                                                                                                                                        printf("Densidade populacional: %.2f hab/km²\n", densidadePopulacional2);
+                                                                                                                                                                                                                                                                                                                            printf("PIB per capita: %.2f\n", pibPerCapita2);
+
+                                                                                                                                                                                                                                                                                                                                printf("\nComparação das cartas (Atributo: PIB):\n");
+
+                                                                                                                                                                                                                                                                                                                                    printf("carta 1 - %s: %.2f \n", cidade1, pib1);
+                                                                                                                                                                                                                                                                                                                                        printf("Carta 2 - %s: %.2f \n", cidade2, pib2);
+
+                                                                                                                                                                                                                                                                                                                                            //comparar atributo PIB
+                                                                                                                                                                                                                                                                                                                                                if(pib1 > pib2){
+                                                                                                                                                                                                                                                                                                                                                        printf("Resultado:carta 1 (%s) venceu!\n", cidade1);
+                                                                                                                                                                                                                                                                                                                                                            }else{
+                                                                                                                                                                                                                                                                                                                                                                    printf("Resultado:carta 2 (%s) venceu!\n", cidade2);
+                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                            return 0;
+                                                                                                                                                                                                                                                                                                                                                                            }
